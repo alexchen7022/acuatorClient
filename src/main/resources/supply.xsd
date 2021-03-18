@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://supply.tgg.com/webservice"
+           targetNamespace="http://supply.tgg.com/webservice" elementFormDefault="qualified">
+
+  <!-- 定义请求实体 -->
+  <xs:element name="vmnListRequest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="request" type="tns:request" minOccurs="1" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- 定义响应实体 -->
+  <xs:element name="vmnListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="response" type="tns:response" minOccurs="1" maxOccurs="unbounded" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:complexType name="request">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="vmn" type="xs:string"/>
+      <xs:element minOccurs="0" name="vendorCd" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="response">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="vmn" type="xs:string"/>
+      <xs:element minOccurs="0" name="vmnId" type="xs:string"/>
+      <xs:element minOccurs="0" name="vendorCd" type="xs:string"/>
+      <xs:element name="isSpecialLabel" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="labelCategoryId" type="xs:string"/>
+      <xs:element minOccurs="0" name="labelCategoryDescription" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>

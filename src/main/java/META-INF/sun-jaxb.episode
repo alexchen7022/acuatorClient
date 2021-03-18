@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="2.1" xmlns="http://java.sun.com/xml/ns/jaxb">
+  <!--
+
+此檔案是由 JavaTM Architecture for XML Binding(JAXB) Reference Implementation, v2.2.11 所產生 
+請參閱 <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
+一旦重新編譯來源綱要, 對此檔案所做的任何修改都將會遺失. 
+產生時間: 2021.03.19 於 01:14:33 AM CST 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="http://supply.tsmc.com/webservice">
+    <schemaBindings map="false">
+      <package name="com.acuator.test.client.ws"/>
+    </schemaBindings>
+    <bindings scd="tns:vmnListRequest">
+      <class ref="com.acuator.test.client.ws.VmnListRequest"/>
+    </bindings>
+    <bindings scd="~tns:request">
+      <class ref="com.acuator.test.client.ws.Request"/>
+    </bindings>
+    <bindings scd="tns:vmnListResponse">
+      <class ref="com.acuator.test.client.ws.VmnListResponse"/>
+    </bindings>
+    <bindings scd="~tns:response">
+      <class ref="com.acuator.test.client.ws.Response"/>
+    </bindings>
+  </bindings>
+</bindings>
+
